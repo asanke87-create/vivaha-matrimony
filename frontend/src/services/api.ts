@@ -31,12 +31,13 @@ let _backendAlive: boolean | null = null;
 const isBackendAlive = async (): Promise<boolean> => {
   if (_backendAlive !== null) return _backendAlive;
   try {
-    await axios.get('/api/profiles/search?page=0&size=1&minAge=18&maxAge=60', { timeout: 1500 });
-    _backendAlive = true;
+    const res = await axios.get('/api/profiles/search?page=0&size=1&minAge=18&maxAge=60', { timeout: 2000 });
+    // Must return JSON with a profiles array — not the HTML of index.html
+    _backendAlive = res.data && typeof res.data === 'object' && Array.isArray(res.data.profiles);
   } catch {
     _backendAlive = false;
   }
-  return _backendAlive;
+  return _backendAlive ?? false;
 };
 
 // Reset cache every 30 s so switching backend on later auto-detects
