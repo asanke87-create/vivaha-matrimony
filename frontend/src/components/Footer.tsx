@@ -42,7 +42,7 @@ const Footer = () => (
 
         <div className={styles.contact}>
           <h4>Contact</h4>
-          <p>📍 No.356 Denzil Kobbekaduwa Road,<br />Battaramulla, Sri Lanka</p>
+          <p>📍 No.01 Minuwangoda,<br />Sri Lanka</p>
           <p>📞 +94 112 824 814</p>
           <p>🕐 8:30 am – 8:30 pm (Mon–Sun)</p>
           <p>✉️ support@vivaha.lk</p>
