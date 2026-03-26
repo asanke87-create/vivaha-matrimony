@@ -1,0 +1,242 @@
+.page {
+  min-height: 100vh;
+  background: #4a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 440px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.emoji { font-size: 1.8rem; }
+
+.brand { font-family: 'Playfair Display', serif; }
+
+.brandMain {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.brandDot {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--text-medium);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(139,26,26,0.1);
+}
+
+.input::placeholder { color: var(--text-light); }
+
+.forgotRow {
+  text-align: right;
+  margin-top: -0.5rem;
+}
+
+.forgotLink {
+  font-size: 0.82rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.forgotLink:hover { text-decoration: underline; }
+
+.terms {
+  font-size: 0.78rem;
+  color: var(--text-medium);
+  text-align: center;
+}
+
+.terms a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.submitBtn {
+  padding: 0.85rem;
+  background: var(--gold);
+  color: #4a0a0a;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s;
+  margin-top: 0.3rem;
+  font-family: inherit;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(200,168,75,0.4);
+}
+
+.submitBtn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 1.2rem 0 0.8rem;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider span {
+  background: white;
+  padding: 0 0.8rem;
+  position: relative;
+}
+
+.demo {
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+}
+
+.demoHint {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.demoAccounts {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.demoBtn {
+  padding: 0.4rem 0.8rem;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.demoBtn:hover {
+  border-color: var(--gold);
+  color: var(--gold-dark);
+  background: #fffbf0;
+}
+
+.demoPass {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.demoPass strong { color: var(--text-medium); }
+
+.switchText {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-medium);
+  margin-top: 1rem;
+}
+
+.switchLink {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.switchLink:hover { text-decoration: underline; }
